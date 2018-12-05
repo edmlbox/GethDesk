@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Fill meta -->
+    <meta name='GethDesk is a web based application with user interface for ethereum Geth Go console client.
+    GethDesk makes easier to show you data about your Geth Go node current condition, whithout using inconvinent console commands.' content='CryptoBit: Bitcoin Wallet, send receive bitcoins with minimun fees.'>
+    <meta name='keywords' content='GethDesk, ethereum, geth go,'>
+    <title>GethDesk</title>
+    <!--end meta -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich|Audiowide|Bai+Jamjuree|Cairo|Electrolize|Monda|Orbitron|Play|Rajdhani:500"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Aldrich|Amiko|Audiowide|Bai+Jamjuree|Barlow+Condensed|Baumans|Exo|IBM+Plex+Sans+Condensed|Iceberg|Kelly+Slab|Lato:300|Martel+Sans|Meera+Inimai|Nova+Flat|Nova+Round|Nova+Square|Poiret+One|Rajdhani|Ramabhadra|Rationale|Saira+Semi+Condensed|Sarpanch|Shanti|Squada+One|Strait|Teko"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+    </style>
+   
+</head>
+
+<body>
+    <!-- <div id='d1'>
+            <div id='d2'></div>
+            <div id='d3'></div>-->
+    </div>
+    <div class='cont_main' id='cont_main_id'>
+        <!--Modal Window start-->
+        <div class="modal" tabindex="-1" role="dialog" id='modal_connection_window'>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id='modal-title-text'>Error</h5><button type="button" class="close"
+                            data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;
+                            </span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id='modal-body-text'></p>
+                    </div>
+                    <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                </div>
+            </div>
+        </div>
+        <!--Modal Window end-->
+        <div class='top_panel'>
+            <div class='top_panel_appName'><img src="1200px-Ethereum_logo_2014.png" alt="Ethereum">
+                <h4>Go Ethereum Node Control Panel
+                </h4>
+                <div class='cirlce_status cirlce_status_green' id='cirlce_status'></div>
+                <h4 id='Node_info'></h4><button id='tsetBTNN'>testbtn</button><button id='tsetBTNN2'>testbtn<button class='class_dics' id='Dissconnect_btn'>Dissconnect<i class="material-icons material-icons_dissconect">exit_to_app
+                    </i></button>
+            </div>
+        </div>
+        <div class='connect_window connect_window_hide' id='connect_window'>
+            <h2 class='header_h2'>Connect to Node</h2>
+            <p>Enter node ip address and port number to connect.</p>
+            <form id='connect_form'><span>Protocol:</span>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="connect_protocol_radio"
+                        id="connect_to_node_input_http" value="http" checked><label class="form-check-label" for="connect_to_node_input_http">HTTP
+                    </label></div>
+                <div class="form-check  form-check-inline"><input class="form-check-input" type="radio" name="connect_protocol_radio"
+                        id="connect_to_node_input_https" value="https"><label class="form-check-label" for="connect_to_node_input_https">HTTPS
+                    </label></div>
+                <div class="form-group"><label for="exampleInputEmail1" class='exampleInputEmail1'>Node IP address:</label><input
+                        type="text" class="form-control" id="connect_to_node_input_ip" aria-describedby="emailHelp"
+                        placeholder="Default ip address : 127.0.0.1" autocomplete="true"><small id="emailHelp" class="form-text text-muted"></small></div>
+                <div class="form-group"><label for="exampleInputPassword1">Node port number:</label><input type="text"
+                        class="form-control" id="connect_to_node_input_port" placeholder="Default port: 8545"
+                        autocomplete="true"></div><button type="button" class="btn btn-primary" id='connect_to_node_btn'>Connect</button>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="connect_remember_node" checked
+                        value="option1"><label class="form-check-label" for="connect_remember_node">Remember node</label></div>
+            </form>
+        </div>
+        <nav class='left_nav'>
+            <ul>
+                <li class='Dashboard' id='Dashboard'>
+                    <img src="style/header/dashboard.svg" alt="Home" class='navIMGColor'>
+                  <!--  <i class="material-icons hideWHenColor">dashboard </i>-->
+                    <h4>Dashboard</h4>
+                </li>
+                <li class='Accounts' id='Accounts'>
+                    <img src="style/header/walletz.svg" alt="Account List" class='navIMGColor'>
+                    <i class="material-icons hideWHenColor">account_box </i>
+                    <h4>Accounts <br>Manager</h4>
+                </li>
+                <li class='Mining' id='Mining'>
+                    <img src="style/header/1258567.svg" alt="Mining" class='navIMGColor'>
+                    <i class="material-icons hideWHenColor">gavel </i>
+                    <h4>Mining</h4>
+                </li>
+                <li class='Node_Info' id='Node_Info'>
+                    <img src="style/header/information.svg" alt="Node Info" class='navIMGColor'>
+                    <i class="material-icons hideWHenColor">info </i>
+                    <h4>Node <br>Info</h4>
+                </li>
+                <li class='Map' id='Map'>
+                    <img src="style/header/placeholder.svg" alt="Map" class='navIMGColor'>
+                    <i class="material-icons hideWHenColor">place </i>
+                    <h4>Connected<br>Nodes Map</h4>
+                </li>
+            </ul>
+        </nav>
+        <ul class='nav_sub_menu nav_sub_menu_display' id='nav_sub_menu_Dashboard' style='background-color: rgb(247, 247, 247)'>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="10"
+                    aria-valuemin="0" aria-valuemax="100" id='progressBarId'>
+                    <div class='node_sync_stat_cont_child remain_block_Block_cont'>
+                        <div class="spinner">
+                            <div class="rect1"></div>
+                            <div class="rect2"></div>
+                            <div class="rect3"></div>
+                            <div class="rect4"></div>
+                            <div class="rect5"></div>
+                        </div><span class='remain_block_Block' id='remain_block_Block_pers'>-- </span><span class='remain_block_Block_text'
+                            id='remain_block_text'>Sync in progress</span>
+                    </div>
+                </div>
+            </div>
+            <section class='node_sync_stat_cont'>
+                <div class='node_sync_stat_cont_child'><span class='remain_block_Block' id='remain_block_Block'>--
+                    </span><span class='remain_block_Block_text' id='remain_block_text'>Remaining Blocks</span></div>
+                <div class='node_sync_stat_cont_child'><span class='currentBlock' id='currentBlock'>--</span><span
+                        class='currentBlock_text' id='currentBlock_text'>Current Block
+                    </span></div>
+                <div class='node_sync_stat_cont_child'><span class="highestBlock" id='highestBlock'>--</span><span
+                        class='highestBlock_text' id='highestBlock_text'>Highest Block
+                    </span></div>
+                <div class='node_sync_stat_cont_child'><span class='startingBlock' id='startingBlock'>--</span><span
+                        class='startingBlock_text' id='startingBlock_text'>Starting Block</span></div>
+                <div class='node_sync_stat_cont_child'><span class='knownStates' id='knownStates'>--</span><span class='knownStates_text'
+                        id='knownStates_text'>Known States
+                    </span></div>
+                <div class='node_sync_stat_cont_child'><span class='pulledStates' id='pulledStates'>--</span><span
+                        class='pulledStates_text' id='pulledStates_text'>Pulled States
+                    </span></div>
+            </section>
+            <div class='Network_cont rpc_modules_cont'><span class='Network_text' id='Network_peer_run'><i class="material-icons material-icons-apis">
+                        play_arrow
+                    </i><span>Running Apis</span></span>
+                <span class="Network_types" id='rpc_modules'></span>
+                <span class='Network_text' id='Network_peer_dis'><i class="material-icons material-icons-dis">
+                        cancel
+                    </i><span>Disabled Apis</span>
+                </span><span class="Network_types" id='rpc_modules_disabled'></span></div>
+            <section class='net_info'>
+                <div class="mdl-card mdl-shadow--2dp demo-card-square">
+
+
+                    <div class="mdl-card__title mdl-card--expand">
+                        <div class='headerCard'> <div class='headerImgWarp'>
+                                <img src="style/header/server98.svg" alt="IMG" class='headerCardImage'>
+                            </div></div>
+                        <h2 class="mdl-card__title-text" id='Network_types'>--</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Network ID.
+                    </div>
+
+                </div>
+
+
+                <!-- Square card -->
+                <div class="mdl-card mdl-shadow--2dp demo-card-square">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <div class='headerCard'> <div class='headerImgWarp'>
+                                <img src="style/header/wifi55.svg" alt="IMG" class='headerCardImage'>
+                            </div></div>
+                        <h2 class="mdl-card__title-text" id='Network_listening'>--</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Client actively listening for network connections.
+                    </div>
+
+                </div>
+                <!-- Square card -->
+                <div class="mdl-card mdl-shadow--2dp demo-card-square">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <div class='headerCard'>
+                            <div class='headerImgWarp'>
+                                <img src="style/header/computers.svg" alt="IMG" class='headerCardImage'>
+                            </div>
+                        </div>
+                        <h2 class="mdl-card__title-text" id='Network_peer_length'>--</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Number of peers currently connected to the client.
+                    </div>
+
+                </div>
+                <!-- Square card -->
+                <div class="mdl-card mdl-shadow--2dp demo-card-square">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <div class='headerCard'> <div class='headerImgWarp'>
+                                <img src="style/header/node.svg" alt="IMG" class='headerCardImage'>
+                            </div></div>
+                        <h2 class="mdl-card__title-text" id='Network_clinet_version'>--</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        The current ethereum protocol version.
+                    </div>
+
+                </div>
+                <!-- Square card -->
+                <div class="mdl-card mdl-shadow--2dp demo-card-square">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <div class='headerCard'> <div class='headerImgWarp'>
+                                <img src="style/header/cpu.svg" alt="IMG" class='headerCardImage'>
+                            </div></div>
+                        <h2 class="mdl-card__title-text" id='eth_mining'>--</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <span class='mdl-card__supporting-text mdl-card__supporting-child'> Client mining status.</span>
+                      <!--  <button id='stopMiningbtnDash' class='stopMiningbtnDash'></button>-->
+                    </div>
+
+                </div>
+                <!-- Square card -->
+                <div class="mdl-card mdl-shadow--2dp demo-card-square">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <div class='headerCard'> <div class='headerImgWarp'>
+                                <img src="style/header/startup.svg" alt="IMG" class='headerCardImage'>
+                            </div></div>
+                        <h2 class="mdl-card__title-text" id='eth_hashrate'>--</h2><span class='mdl-card__title-text hsText'>H/S</span>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Number of hashes per second that the node is mining with.
+                    </div>
+
+
+                </div>
+                <!-- Square card -->
+                <div class="mdl-card mdl-shadow--2dp demo-card-square">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <div class='headerCard'> <div class='headerImgWarp'>
+                            <img src="style/header/price-tag777.svg" alt="IMG" class='headerCardImage'>
+                            </div></div>
+                        <h2 class="mdl-card__title-text" id='eth_gasPrice'>--</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <span class='mdl-card__supporting-text mdl-card__supporting-child'> Current price per gas in ether.</span>
+                        <div class='wei_conv_cont scroll scroll1'>
+                                <button class='wei_conv' id='To_wei_conv'>wei</button>      
+                                <button class='wei_conv' id='To_ether_conv'>ether</button>      
+                                <button class='wei_conv' id='To_gwei_conv'>gwei</button>
+                                <button class='wei_conv' id='To_micro_conv'>micro</button>
+
+
+                        </div>
+                       
+                       
+                    </div>
+
+
+                </div>
+                <div class="mdl-card mdl-shadow--2dp demo-card-square">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <div class='headerCard'>
+                                <div class='headerImgWarp'>
+                                        <img src="style/header/wallet.svg" alt="IMG" class='headerCardImage'>
+                                    </div>
+                        </div>
+                        <h2 class="mdl-card__title-text" id='Network_coinbase'>--</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Mining reward address.
+                    </div>
+
+
+                </div><!--
+                <div class='Network_cont'><span class="Network_types" id='Network_types'></span><span class='Network_text'
+                        id='Network_text'>Network</span></div>
+                <div class='Network_cont'><span class="Network_types" id='Network_listening'></span><span class='Network_text'
+                        id='Network_peer_lis'>Listening</span></div>
+                <div class='Network_cont'><span class="Network_types" id='Network_peer_length'></span><span class='Network_text'
+                        id='Network_peer_con'>Connected
+                        Peers
+                    </span></div>
+                <div class='Network_cont'><span class="Network_types" id='Network_clinet_version'></span><span class='Network_text'
+                        id='Network_peer_cli'>Client version</span></div>
+                <div class='Network_cont'>
+                    <div class="class_icon"><span class="Network_types" id='eth_mining'></span></div><span class='Network_text'
+                        id='Network_peer_min'><img src="style/mining.svg" alt="mining">Mining Active</span>
+                </div>
+                <div class='Network_cont'><span class="Network_types" id=''></span><span class='Network_text'
+                        id='Network_peer_hash'>Hashrate</span></div>
+                <div class='Network_cont'><span class="Network_types" id='eth_gasPrice'></span><span class='Network_text'
+                        id='Network_peer_gas'>Gas
+                        price
+                    </span></div>
+                <div class='Network_cont'><span class="Network_types" id='eth_accounts'></span><span class='Network_text'
+                        id='Network_peer_acc'>Accounts
+                        number
+                    </span></div>
+                <div class='Network_cont'><span class="Network_types" id='eth_accounts_total_bal'></span><span class='Network_text'
+                        id='Network_peer_acc_bal'>Total balance</span></div>
+           <div class='Network_cont'><span class="Network_types" id='eth_blockNumber'></span><span class='Network_text' id='Network_peer'>Block
+                                        Number</span></div>
+                <div class='Network_cont'><span class="Network_types" id='Network_coinbase'></span><span class='Network_text'
+                        id='Network_peer_coin'>Coinbase
+                        Account
+                    </span></div>
+            </section>-->
+       <main class='rpc_webSocket'>
+                <div class='ws_input_cont'>
+                    <h5>Start RPC WEBSERVER</h5>
+                    <div class='ws_input_cont_two'>
+                        <label for="ws_input_host">Host</label>--><input type="text" placeholder='Host:' id='ws_input_host'
+                            class='ws_input_host'></div>
+                    <div class='ws_input_cont_two'>
+                        <!--<label for="ws_input_port">Port</label>--><input type="text" placeholder="Port:" id='ws_input_port'
+                            class='ws_input_host'></div>
+                    <div class='ws_input_cont_two'>
+                        <!--<label for="ws_input_cors">CORS</label>--><input type="text" placeholder='Cors:' id='ws_input_cors'
+                            class="ws_input_host"></div>
+                    <div class='ws_input_cont_two'>
+                        <!--<label for="ws_input_apis">Apis</label>--><input type="text" placeholder='Apis:' id='ws_input_apis'
+                            class="ws_input_host"></div><button class='ws_btn_start_stop' id='ws_btn_start_stop'><i
+                            class="material-icons material-icons_arrow">play_arrow
+                        </i></button>
+                </div> 
+            </main>  
+        </ul>
+        <ul class='nav_sub_menu nav_sub_menu_display' id='nav_sub_menu_Accounts' style='background-color: rgb(247, 247, 247)'>
+            <section class='accounts_tab'>
+                <div class='column_one'>
+                    <div class='AccountWrap'>
+                        <div class='mnox123'><img src="style/diary2.svg" alt="Accounts">
+                            <div id='account_number_col1'></div><span class='ETH_DASHBOARD_BAL'>Accounts</span>
+                        </div>
+                    </div>
+                    <div class='BalanceWrap'>
+                        <div class='mnox123'><img src="style/money.svg" alt="Total Balance">
+                          <div class='forLowRes'>  <div id='account_tot_bal'>--</div><span class='ETH_DASHBOARD_BAL'>ETH</span></div>
+                            <span class='balText'>Total Balance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class='accound_wraper'>
+                    <ul class='list_account_cont' id='list_account_cont'></ul>
+                </div>
+                <div class='column_three'>
+                    <div class='btn_add_acc_cont'>
+
+                        <div class='imgandHeaderc imgandHeadercOne'>
+                            <img src="style/add.svg" alt="add" title='add' class='svg_icon_acc'>
+                            <h5 class='h5HeadingCl'>Create account
+                            </h5>
+                        </div>
+
+                        <div class='zxc333'>
+                            <div class='iconInsideForm'><i class="material-icons">
+                                    lock
+                                </i>
+                            </div>
+                            <input type="password" id='encryptNewAcccount' class='form-control' placeholder="Set Password"
+                                data-toggle="popover" title="Form error" data-content="Password too short. Minimum length 6 characters."
+                                data-placement="left">
+                            <div class='iconInsideForm iconInsideForm2'><i class="material-icons" data-placement="left">
+                                    lock
+                                </i></div>
+                            <input type="password" id='encryptNewAcccount2' class='form-control' placeholder="Repeat password"
+                                data-toggle="popover" title="Form error" data-content="Passwords do not match!"
+                                data-placement="left">
+
+                            <button id='addAccountBTN' class='btn btn-primary'><span>Create</span>
+                            </button>
+                        </div>
+                        <div class='createAccAnimation NewaccAnimetion scale-up-center'>
+                            <h3 class='HeadPosAbsol'>Creating account ...</h3>
+                            <div class="sk-cube-grid">
+                                <div class="sk-cube sk-cube1"></div>
+                                <div class="sk-cube sk-cube2"></div>
+                                <div class="sk-cube sk-cube3"></div>
+                                <div class="sk-cube sk-cube4"></div>
+                                <div class="sk-cube sk-cube5"></div>
+                                <div class="sk-cube sk-cube6"></div>
+                                <div class="sk-cube sk-cube7"></div>
+                                <div class="sk-cube sk-cube8"></div>
+                                <div class="sk-cube sk-cube9"></div>
+                            </div>
+                            <!-- <div class="sk-folding-cube">
+                                <div class="sk-cube1 sk-cube"></div>
+                                <div class="sk-cube2 sk-cube"></div>
+                                <div class="sk-cube4 sk-cube"></div>
+                                <div class="sk-cube3 sk-cube"></div>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class='personal_importRawKey'>
+                        <div class='imgandHeaderc imgandHeadercTWO'>
+                            <img src="style/key.svg" alt="upload" title='upload' class='svg_icon_acc'>
+                            <h5>Import private key</h5>
+                        </div>
+                        <input type="text" id='personal_importRawKey_input' class='form-control' placeholder="Private Key"
+                            data-toggle="popover" title="Private key (hex string)" data-content="Required!"
+                            data-placement="left">
+                        <div class='iconInsideForm keyHexPriveate'><i class="material-icons">
+                                vpn_key
+                            </i>
+                        </div>
+
+                        <input type="password" id='personal_importRawKey_input_encrypt' class='form-control'
+                            placeholder="Set Password" data-toggle="popover" title="Form error" data-content="Required. Minimum length 6 characters!"
+                            data-placement="left">
+                        <div class='iconInsideForm iconInsideFormX1'><i class="material-icons">
+                                lock
+                            </i>
+                        </div>
+                        <input type="password" id='personal_importRawKey_input_encrypt2' class='form-control'
+                            placeholder="Repeat Password" data-toggle="popover" title="Form error" data-content="Passwords do not match!"
+                            data-placement="left">
+                        <div class='iconInsideForm iconInsideFormX2'><i class="material-icons">
+                                lock
+                            </i>
+                        </div>
+                        <button id='personal_importRawKey_btn' class='btn btn-primary'>Import</button>
+                        <div class='createAccAnimation importKeyANimation scale-up-center'>
+                            <h3 class='HeadPosAbsol'>Importing account ...</h3>
+                            <div class="sk-cube-grid">
+                                <div class="sk-cube sk-cube1"></div>
+                                <div class="sk-cube sk-cube2"></div>
+                                <div class="sk-cube sk-cube3"></div>
+                                <div class="sk-cube sk-cube4"></div>
+                                <div class="sk-cube sk-cube5"></div>
+                                <div class="sk-cube sk-cube6"></div>
+                                <div class="sk-cube sk-cube7"></div>
+                                <div class="sk-cube sk-cube8"></div>
+                                <div class="sk-cube sk-cube9"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </ul>
+        <ul class='nav_sub_menu nav_sub_menu_display' id='nav_sub_menu_Mining' style='background-color: rgb(247, 247, 247)'>
+            <div class='column_one mining_tab'>
+                <div class="AccountWrap">
+                    <div class="BalanceWrapCCC">
+                        <div class="mnox123">
+                            <img src="style/chip.svg" alt="Total Balance">
+                            <div class='contHASH'>
+                                <div id="min_hash_rate">CPU Mining</div>
+                                <span class="minHashRateTExt" id='minHashRateTExtID'>OFF</span>
+                            </div>
+
+                        </div>
+                        <div class="BalanceWrap">
+                            <div class="mnox123">
+                                <img src="style/performance.svg" alt="Total Balance">
+                                <div class='contHASH'>
+                                    <div id=""><span id='min_hash_rate1'>0</span>
+                                        <span class='haspPerS'>h/s</span>
+                                    </div>
+                                    <span class="minHashRateTExt">Mining Hashrate</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="mnox123">
+                        <img src="style/mine.svg" alt="Accounts">
+
+                        <div class='contHASH'>
+                            <span class="mineNotMining">Not Mining</span>
+                            <div id="is_Node-mining"><span>Mining Status</span> </div>
+
+                        </div>
+                    -->
+                </div>
+
+            </div>
+
+            <div class='miningChart'>
+
+                <div id="chart_div">
+                    <div class="chartContainer">
+                        <canvas id="lineChartPinkOrange" width="1149" height="300px"></canvas>
+                    </div>
+
+                </div>
+            </div>
+            <div class='mineStartStop'>
+                <div class='MiningOptionHeaderCont'>
+                    <h3 class='MiningOptionHeader'>
+                        <img src="style/cpu.svg" alt="CPUCores">
+                    </h3>
+                    <span class='numOfCores'>Number of CPU cores to use</span>
+                    <input type='number' class='selectCores inputStyleOptions' name='cpuCore' id='numOfCoresID' min="1"
+                        value="1">
+
+                    </select>
+
+                    <h3 class='MiningOptionHeader'>
+                        <img src="style/wallet.svg" alt="CPUCores">
+                    </h3>
+                    <span class='numOfCores'>Reward Account</span>
+                    <select class='selectrewardAcc inputStyleOptions' name='RewardAddress' id='RewardAddressID'>
+
+                    </select>
+
+                </div>
+
+
+                <div class='mineBTNS'>
+                    <button id='mSTART' class='btnMINER btnMINERstart'><span id='btnMINERstartICON'><i class="material-icons">
+                                power_settings_new
+                            </i></span><span id='btnMINERstartText'>START MINING</span></button>
+                    <button id='mSTOP' class='btnMINER btnMINERstop'><span class='btnMINERstopICON'><i class="material-icons">
+                                stop
+                            </i></span><span id='btnMINERstopICONText'>STOP MINING</span></button>
+                </div>
+            </div>
+
+
+        </ul>
+        <ul class='nav_sub_menu nav_sub_menu_display' id='nav_sub_menu_node' style='background-color: rgb(247, 247, 247)'>
+            <section class='nav_sub_menu_node_section'>
+                <section class='node_info_header_class'>
+                    <div id='current_node_status'><img src="style/serverInfo1.svg" alt="Passport" class='networking_icons'>
+                        <!--
+                                <i class="material-icons material-icons_memory">memory
+                                </i>--><span
+                            class='current_node_information'>Your running node information</span></div>
+                    <div id='connected_node_pers_header'><img src="style/networking.svg" alt="Peers" class='networking_icons'><span
+                            class='con_peers_lengt' id='con_peers_lengt'></span><span class='con_peers_lengt_text' id='con_peers_lengt_text'>Peers
+                            connected to your node </span></div>
+                </section>
+
+                <section class='ul_cont_accordion'>
+                    <ul class="list-group">
+                        <li class="list-group-item"><span class="current_node_header">Default database directory :
+                            </span><span id='admin_datadir'></span></li>
+                        <li class="list-group-item"><span class="current_node_header">Name : </span><span id='admin_nodeInfo_li_name'></span></li>
+                        <li class="list-group-item"><span class="current_node_header">Node id : </span><span id='admin_nodeInfo_li_id'></span></li>
+                        <li class="list-group-item"><span class="current_node_header">Node ip : </span><span id='admin_nodeInfo_li_ip'></span></li>
+                        <li class="list-group-item"><span class="current_node_header">Listen addr : </span><span id='admin_nodeInfo_li_listenAddr'></span></li>
+                        <li class="list-group-item"><span class="current_node_header">Enode : </span><span id='admin_nodeInfo_li_enode'></span></li>
+                    </ul>
+                    <section class='accordion_connected_nodes'>
+                        <div class='addPeer' id='idPeer'><input type="text" id='idPeerinput' placeholder="PEER ENODE:"><button
+                                class='classPeerbtn' id='idPeerbtn'>Add remote node</button></div>
+                        <div class="accordion" id="accordionExample"></div>
+                    </section>
+                </section>
+        </ul>
+        <ul class='nav_sub_menu nav_sub_menu_display' id='nav_sub_menu_Map' style='background-color: rgb(247, 247, 247)'>
+            <section class='googleMapCont'>
+                <div id="myMap"></div>
+            </section>
+        </ul>
+    </div>
+
+
+
+
+
+    <div class="div_receive_pop scale-in-center myDivToPrint" id='div_receive_pop_print'>
+        <button id='close_qr_pop' class='close_qr_pop btn btn-secondary ui-widget-content'>X</button>
+        <h5>Receive Ethereum</h5>
+        <div class='overInput_qr'><span>amount USD</span><span>amount ETH</span></div>
+        <div class='in_usd_or_eth'><input type="text" id='qr_code_ammount_receive_usd' class="qr_code_ammount_receive"><input
+                type="text" id='qr_code_ammount_receive_eth' class="qr_code_ammount_receive"></div><span class='eth_addr_qr_rec_found'>Ethereum
+            address to receive founds:
+        </span><span id='eth_addr_qr_pop' class='eth_addr_qr_pop'></span>
+        <div id='qr_code_popup' class='qr_code_popup'></div><span class='qr_code_below_text'>This QR code can be
+            scanned
+            <br>by the person who wants to send you ethereum</span>
+        <div class='btn_qr_pop_group'><button id='sendByEmail' class='sendByEmail btn btn-primary'>print</button></div>
+        <div id='EnterEmailAddrIn' class='entEmaPopUp'>
+
+            <img src="style/e-mail-envelope.svg" alt="mail" title='mail' class='iconImgininput'>
+            <input type="email" id='getEmailIn' placeholder="Enter email">
+            <button id='print_qr' class='print_qr btn btn-primary'>send by email</button>
+        </div>
+
+        <div class='mailSentWindow slide-in-top' id='mailSentWindow'>
+
+            <div class="container">
+                <div class="success">
+                    <div class="msg-success">
+                        <div class="letter"></div>
+                    </div>
+                    <div class="shadow"></div>
+                    <h1 class="title">Success</h1>
+                    <p class="message">Wohoo! Your message was delivered successfully.</p>
+                    <button class="btn btn-success" id='cls_success_whoop'>Continue</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class='miningPOPUP' id='miningPOPUPID'>
+        <h3 id='miningPOPUPHeader'>Mining is Scheduled!</h3>
+        <h4 id='miningPOPUPHeaderUnder'>Blockchain not fully synced!</h4>
+
+        <p id='miningPOPUPHeaderP'>Mining will start automatically after some blockchain synchronized. Note that mining for real ether only makes sense if you are in sync with the network (since you mine on top of the consensus block). Therefore the eth blockchain downloader/synchroniser will delay mining until syncing is complete, and after that mining automatically starts unless you cancel your intention with mining stop button.</p>
+        <button class='miningpopBTNOK' id='miningpopBTNOK'>OK</button>
+    </div>
+   
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    
+
+    
+    <script src='script/connect.js'></script>
+    <script src='script/index.js'></script>
+    <script src='script/fillMenus.js'></script>
+  
+    
+   
+    
+
+    <script src='script/overlappingLibrary.js'></script>
+    <script src='script/map.js'></script>
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=[AktWnPLnLOVzsFWrXp4Li69oUJtBAeynTPsHcUaHPw2RQ0qnHCfKfTRDLdZYRTLQ]'></script>
+
+</body>
+
+</html>
