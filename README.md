@@ -6,17 +6,17 @@
 condition, without using inconvenient console commands.
 
 ### Dashboard page
-1. Blockchain current synchronization progress.
-2. Enabled and Disabled **"APIS"**.
-3. To which network your node connected. (**Main** or **Testnet** and name of 
+* Blockchain current synchronization progress.
+* Enabled and Disabled **"APIS"**.
+* To which network your node connected. (**Main** or **Testnet** and name of 
    the network.);
-4. **"Open"** or **"Not"** your node to network connections.
-5. Number of peers connected to your node. (Default maximum is 25, if not 
+* **"Open"** or **"Not"** your node to network connections.
+* Number of peers connected to your node. (Default maximum is 25, if not 
    specified else.);
-6. Current Ethereum protocol version.
-7. Node mining status **"Yes"** or **"Not"**, if yes than you get the hashrate speed. 
-8. Current price per gas in ether. (Other units available also).
-9. Mining default reward address. (You can change it).
+* Current Ethereum protocol version.
+* Node mining status **"Yes"** or **"Not"**, if yes than you get the hashrate speed. 
+* Current price per gas in ether. (Other units available also).
+* Mining default reward address. (You can change it).
 
 ![GitHub Logo](/readmeIMG/dashboard.jpg)
 
@@ -40,8 +40,7 @@ condition, without using inconvenient console commands.
 * On Main network mining won't start until your blockchain is fully synchronized! Mining will be scheduled to start automatically when blockchain fully synchronized.
 
 * On Test network mining can start without blockchain being fully synchronized, it will start and stop during blockchain synchronization.
- 
-1. CPU mining status.
+
 2. Mining hashrate speed.
 3. Visualized mining chart.
 4. Choose a default mining reward address.
