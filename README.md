@@ -60,3 +60,6 @@ condition, without using inconvenient console commands.
 ### World map of connected peers.
 
 ![GitHub Logo](/readmeIMG/mapofNodes.jpg)
+
+
+![GitHub Logo](/readmeIMG/connection.jpg)
