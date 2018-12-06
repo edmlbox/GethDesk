@@ -61,9 +61,16 @@ condition, without using inconvenient console commands.
 
 ![GitHub Logo](/readmeIMG/mapofNodes.jpg)
 
-### Connection
-To connect to Geth Go through GethDesk you need to run Geth Go with the following parameters:
-geth -rpc -rpcaddr 
-0.0.0.0 -rpccorsdomain '*' -rpcapi admin,personal,net,web3,miner,eth
+## Connection
+To connect to **Geth Go** through **GethDesk** you need to run **Geth Go** with the following parameters:
+**geth -rpc -rpcaddr 0.0.0.0 -rpccorsdomain '*' -rpcapi admin,personal,net,web3,miner,eth**
 
+You can customize **Geth Go** running options as you want, **but make sure that You 
+run Geth Go application with required apis enabled: -rpcapi 
+admin,personal,net,web3,miner,eth** to get
+**GethDesk** working correctly as it depends on them to gather information. 
+
+If you forget to put **-rpcapi admin,personal,net,web3,miner,eth** while running 
+**Geth Go** it will run with default apis therefore **GethDesk** wont't work 
+correctly.
 ![GitHub Logo](/readmeIMG/connection.jpg)
