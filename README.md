@@ -22,10 +22,10 @@ condition, without using inconvenient console commands.
 
 
 ### Accounts Manager page:
-1. Number of accounts your node owns.
-2. Accounts addresses with current balance in ether.
-3. Create new password protected accounts.
-4. Import private keys and encrypt them with password.
+* Number of accounts your node owns.
+* Accounts addresses with current balance in ether.
+* Create new password protected accounts.
+* Import private keys and encrypt them with password.
 
 ![GitHub Logo](/readmeIMG/accounts.jpg)
 
@@ -33,25 +33,25 @@ condition, without using inconvenient console commands.
 ![GitHub Logo](/readmeIMG/paymentRequest.jpg)
 
 ### Mining page:
-1. Start CPU mining with the required number of cores.
+* Start CPU mining with the required number of cores.
    
 #### Keep in mind. Important!
 
-* On Main network mining won't start until your blockchain is fully synchronized! Mining will be scheduled to start automatically when blockchain fully synchronized.
+1. On Main network mining won't start until your blockchain is fully synchronized! Mining will be scheduled to start automatically when blockchain fully synchronized.
 
-* On Test network mining can start without blockchain being fully synchronized, it will start and stop during blockchain synchronization.
+2. On Test network mining can start without blockchain being fully synchronized, it will start and stop during blockchain synchronization.
 
-2. Mining hashrate speed.
-3. Visualized mining chart.
-4. Choose a default mining reward address.
+* Mining hashrate speed.
+* Visualized mining chart.
+* Choose a default mining reward address.
 
 ![GitHub Logo](/readmeIMG/mining.png)
 
 ### Node Info page:
-1.Your running node all information **[Default Database Directory**, **Node name**, **Node 
+* Your running node all information **[Default Database Directory**, **Node name**, **Node 
   Id**, **Node Ip**, **Listen Addr**, **Enode**.]
 
-2.Detailed information about each peer connected to your node including: [**Node name**, **Enode**, **Id**, 
+* Detailed information about each peer connected to your node including: [**Node name**, **Enode**, **Id**, 
   **LocalAddress**, **RemoteAddress**, **Caps**, **Network Static**, **Network Trusted**, 
   **Inbound**, **Difficulty**, **Head**, **Version**.]
   
