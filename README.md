@@ -51,15 +51,15 @@ condition, without using inconvenient console commands.
 ![GitHub Logo](/readmeIMG/mining.png)
 
 ### Node Info page:
-1.Your running node all information (Default Database Directory, Node name, Node 
-  Id, Node Ip, Listen Addr, Enode.)
-2.Detailed information about each peer connected to your Node: Enode, Id, 
-  LocalAddress, RemoteAddress, Caps, Network Static:, Network Trusted:, 
-  Inbound, Difficulty, Head, Version.
+1.Your running node all information **[Default Database Directory**, **Node name**, **Node 
+  Id**, **Node Ip**, **Listen Addr**, **Enode**.[
+
+2.Detailed information about each peer connected to your includind: [**Node name**, **Enode**, **Id**, 
+  **LocalAddress**, **RemoteAddress**, **Caps**, **Network Static**, **Network Trusted**, 
+  **Inbound**, **Difficulty**, **Head**, **Version**.]
   
 ![GitHub Logo](/readmeIMG/nodeInfo.jpg)
 
-### Map Page
-View connected nodes on world map.
+### World map of connected peers.
 
 ![GitHub Logo](/readmeIMG/mapofNodes.jpg)
