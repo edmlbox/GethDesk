@@ -52,7 +52,7 @@ condition, without using inconvenient console commands.
 1.Your running node all information **[Default Database Directory**, **Node name**, **Node 
   Id**, **Node Ip**, **Listen Addr**, **Enode**.]
 
-2.Detailed information about each peer connected to your includind: [**Node name**, **Enode**, **Id**, 
+2.Detailed information about each peer connected to your node including: [**Node name**, **Enode**, **Id**, 
   **LocalAddress**, **RemoteAddress**, **Caps**, **Network Static**, **Network Trusted**, 
   **Inbound**, **Difficulty**, **Head**, **Version**.]
   
