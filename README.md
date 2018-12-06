@@ -37,9 +37,9 @@ condition, without using inconvenient console commands.
    
 #### Keep in mind. Important!
 
-On Main network mining won't start until your blockchain is fully synchronized! Mining will be scheduled to start automatically when blockchain fully synchronized.
+* On Main network mining won't start until your blockchain is fully synchronized! Mining will be scheduled to start automatically when blockchain fully synchronized.
 
-On Test network mining can start without blockchain being fully synchronized, it will start and stop during blockchain synchronization.
+* On Test network mining can start without blockchain being fully synchronized, it will start and stop during blockchain synchronization.
  
 1. CPU mining status.
 2. Mining hashrate speed.
@@ -50,7 +50,7 @@ On Test network mining can start without blockchain being fully synchronized, it
 
 ### Node Info page:
 1.Your running node all information **[Default Database Directory**, **Node name**, **Node 
-  Id**, **Node Ip**, **Listen Addr**, **Enode**.[
+  Id**, **Node Ip**, **Listen Addr**, **Enode**.]
 
 2.Detailed information about each peer connected to your includind: [**Node name**, **Enode**, **Id**, 
   **LocalAddress**, **RemoteAddress**, **Caps**, **Network Static**, **Network Trusted**, 
