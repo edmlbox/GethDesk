@@ -1,6 +1,6 @@
 
 # GethDesk
-** GethDesk ** - is a web based application to simplify work with Ethereum [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) console client.
+**GethDesk** - is a web based application to simplify work with Ethereum [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) console client.
 
 **GethDesk** - makes easier to show you data about your [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) node current 
 condition, without using inconvenient console commands.
