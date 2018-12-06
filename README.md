@@ -21,20 +21,17 @@ condition, without using inconvenient console commands.
 ![GitHub Logo](/readmeIMG/dashboard.jpg)
 
 
-
-
-![GitHub Logo](/readmeIMG/accounts.jpg)
 ### Accounts Manager page:
 1. Number of accounts your node owns.
 2. Accounts addresses with current balance in ether.
 3. Create new password protected accounts.
 4. Import private keys and encrypt them with password.
-5. Send to email or print a payment request receipt with requested amount to 
-    pay.
 
+![GitHub Logo](/readmeIMG/accounts.jpg)
+
+## Send to email or print a payment request receipt with requested amount to pay.
 ![GitHub Logo](/readmeIMG/paymentRequest.jpg)
 
-![GitHub Logo](/readmeIMG/mining.png)
 ### Mining page:
 1. Mining with the required number of cores.
    
@@ -49,7 +46,7 @@ condition, without using inconvenient console commands.
 3. visualized mining chart (Exist only if node mining).
 4. Choose a default mining reward address.
 
-![GitHub Logo](/readmeIMG/nodeInfo.jpg)
+![GitHub Logo](/readmeIMG/mining.png)
 
 ### Node Info page:
 1.YOUR RUNNING NODE INFORMATION (Default Database Directory, Node name, Node 
@@ -57,8 +54,10 @@ condition, without using inconvenient console commands.
 2.Detailed information about each peer connected to your Node: Enode, Id, 
   LocalAddress, RemoteAddress, Caps, Network Static:, Network Trusted:, 
   Inbound, Difficulty, Head, Version.
-
-![GitHub Logo](/readmeIMG/mapofNodes.jpg)
+  
+![GitHub Logo](/readmeIMG/nodeInfo.jpg)
 
 ### Map Page
 View connected nodes on world map.
+
+![GitHub Logo](/readmeIMG/mapofNodes.jpg)
