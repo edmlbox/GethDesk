@@ -1,15 +1,15 @@
 # GethDesk
 
-GethDesk - is a web based application to simplify work with Ethereum [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) console client.
+**GethDesk** - is a web based application to simplify work with Ethereum [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) console client.
 
-GethDesk makes easier to show you data about your "Geth Go" node current 
+**GethDesk** makes easier to show you data about your [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) node current 
 condition, without using inconvenient console commands.
 
 ![GitHub Logo](/readmeIMG/dashboard.jpg)
 
-GethDesk functionalities:
 
-Dashboard page
+
+### Dashboard page
 1. Blockchain current synchronization progress.
 2. Enabled and Disabled "APIS".
 3. To which network your node connected.(Main or Testnet and name of 
