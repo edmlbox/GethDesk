@@ -5,7 +5,7 @@
 **GethDesk** - makes easier to show you data about your [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) node current 
 condition, without using inconvenient console commands.
 
-### Dashboard page
+## Dashboard page
 * Blockchain current synchronization progress.
 * Enabled and Disabled **"APIS"**.
 * To which network your node connected. (**Main** or **Testnet** and name of 
@@ -21,7 +21,7 @@ condition, without using inconvenient console commands.
 ![GitHub Logo](/readmeIMG/dashboard.jpg)
 
 
-### Accounts Manager page:
+## Accounts Manager page:
 * Number of accounts your node owns.
 * Accounts addresses with current balance in ether.
 * Create new password protected accounts.
@@ -32,7 +32,7 @@ condition, without using inconvenient console commands.
 ## You can send a payment request to any email address or print it as pdf.
 ![GitHub Logo](/readmeIMG/paymentRequest.jpg)
 
-### Mining page:
+## Mining page:
 * Start CPU mining with the required number of cores.
    
 #### Keep in mind. Important!
@@ -47,7 +47,7 @@ condition, without using inconvenient console commands.
 
 ![GitHub Logo](/readmeIMG/mining.png)
 
-### Node Info page:
+## Node Info page:
 * Your running node all information **[Default Database Directory**, **Node name**, **Node 
   Id**, **Node Ip**, **Listen Addr**, **Enode**.]
 
@@ -57,13 +57,13 @@ condition, without using inconvenient console commands.
   
 ![GitHub Logo](/readmeIMG/nodeInfo.jpg)
 
-### World map of connected peers.
+## World map of connected peers.
 
 ![GitHub Logo](/readmeIMG/mapofNodes.jpg)
 
 ## Connection
 To connect to **Geth Go** through **GethDesk** you need to run **Geth Go** with the following parameters:
-**geth -rpc -rpcaddr 0.0.0.0 -rpccorsdomain '*' -rpcapi admin,personal,net,web3,miner,eth**
+#### **geth -rpc -rpcaddr 0.0.0.0 -rpccorsdomain '*' -rpcapi admin,personal,net,web3,miner,eth**
 
 You can customize **Geth Go** running options as you want, **but make sure that You 
 run Geth Go application with required apis enabled: -rpcapi 
@@ -73,4 +73,5 @@ admin,personal,net,web3,miner,eth** to get
 If you forget to put **-rpcapi admin,personal,net,web3,miner,eth** while running 
 **Geth Go** it will run with default apis therefore **GethDesk** wont't work 
 correctly.
+
 ![GitHub Logo](/readmeIMG/connection.jpg)
