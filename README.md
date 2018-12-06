@@ -61,5 +61,9 @@ condition, without using inconvenient console commands.
 
 ![GitHub Logo](/readmeIMG/mapofNodes.jpg)
 
+### Connection
+To connect to Geth Go through GethDesk you need to run Geth Go with the following parameters:
+geth -rpc -rpcaddr 
+0.0.0.0 -rpccorsdomain '*' -rpcapi admin,personal,net,web3,miner,eth
 
 ![GitHub Logo](/readmeIMG/connection.jpg)
