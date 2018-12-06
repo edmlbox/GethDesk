@@ -1,12 +1,11 @@
-#GethDesk v1.0 beta.
+# GethDesk
 
-GethDesk - is a web based application to simplify work with Ethereum "Geth Go" console client.
-
-
-https://github.com/ethereum/go-ethereum/wiki/geth
+GethDesk - is a web based application to simplify work with Ethereum [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) console client.
 
 GethDesk makes easier to show you data about your "Geth Go" node current 
 condition, without using inconvenient console commands.
+
+![GitHub Logo](/readmeIMG/dashboard.jpg)
 
 GethDesk functionalities:
 
@@ -22,4 +21,4 @@ Dashboard page
 7. Node mining status "Yes" or "Not", if yes than you get the hashrate speed. 8. Current price per gas in ether.(Other units available also).
 9. Mining default reward address.(You can change it).
 
-![GitHub Logo](/readmeIMG/dashboard.jpg)
+
