@@ -33,19 +33,17 @@ condition, without using inconvenient console commands.
 ![GitHub Logo](/readmeIMG/paymentRequest.jpg)
 
 ### Mining page:
-1. Mining with the required number of cores.
+1. Start CPU mining with the required number of cores.
    
 #### Keep in mind. Important!
 
-!!! On Main network mining won't start until your blockchain is fully synchronized! 
-(Mining will be scheduled to start automatically when blockchain fully synchronized.)
+On Main network mining won't start until your blockchain is fully synchronized! Mining will be scheduled to start automatically when blockchain fully synchronized.
 
-!!! On Test network mining can start without blockchain being fully synchronized. 
-(it will start and stop during blockchain synchronization.)
+On Test network mining can start without blockchain being fully synchronized, it will start and stop during blockchain synchronization.
  
-1. CPU mining status. (Mining or Not)
+1. CPU mining status.
 2. Mining hashrate speed.
-3. visualized mining chart (Exist only if node mining).
+3. Visualized mining chart.
 4. Choose a default mining reward address.
 
 ![GitHub Logo](/readmeIMG/mining.png)
