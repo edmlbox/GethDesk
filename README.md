@@ -1,10 +1,8 @@
 
 # GethDesk
 **[GethDesk](http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html)** - is a web based application to simplify work with Ethereum [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) console client.
-
 **[GethDesk](http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html)** - makes easier to show you data about your [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) node current 
 condition, without using inconvenient console commands.
-
 #### Install this app as [chrome extension](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk) or go directly to [GethDesk](http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html) url. 
 
 
