@@ -4,7 +4,8 @@ GethDesk — is an open source application to simplify work with Ethereum Ge
 #### Install this app as [chrome extension](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk) or go directly to <a href='http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html'>GethDesk</a> url. 
 
 
-## Dashboard
+## Core functionalities
+### Dashboard
 * Blockchain current synchronization progress.
 * Enabled and Disabled **"APIS"**.
 * To which network your node connected. (**Main** or **Testnet** and name of 
