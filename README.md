@@ -6,7 +6,7 @@ condition, without using inconvenient console commands.
 #### Install this app as [chrome extension](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk) or go directly to [GethDesk](http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html) url. 
 
 
-## Dashboard page
+## Dashboard
 * Blockchain current synchronization progress.
 * Enabled and Disabled **"APIS"**.
 * To which network your node connected. (**Main** or **Testnet** and name of 
@@ -22,7 +22,7 @@ condition, without using inconvenient console commands.
 ![GitHub Logo](/readmeIMG/dashboard.jpg)
 
 
-## Accounts Manager page:
+## Accounts Manager
 * Number of accounts your node owns.
 * Accounts addresses with current balance in ether.
 * Create new password protected accounts.
@@ -33,7 +33,7 @@ condition, without using inconvenient console commands.
 ## You can send a payment request to any email address or print it as pdf.
 ![GitHub Logo](/readmeIMG/paymentRequest.jpg)
 
-## Mining page:
+## Mining
 * Start CPU mining with the required number of cores.
    
 #### Keep in mind. Important!
@@ -48,7 +48,7 @@ condition, without using inconvenient console commands.
 
 ![GitHub Logo](/readmeIMG/mining.png)
 
-## Node Info page:
+## Node Info
 * Your running node all information **[Default Database Directory**, **Node name**, **Node 
   Id**, **Node Ip**, **Listen Addr**, **Enode**.]
 
