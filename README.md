@@ -1,9 +1,9 @@
 
 # GethDesk
-**<a src='http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html'>GethDesk</a>** - is a web based application to simplify work with Ethereum [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) console client and
+**<a href='http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html'>GethDesk</a>** - is a web based application to simplify work with Ethereum [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) console client and
  makes easier to show you data about your [Geth Go](https://github.com/ethereum/go-ethereum/wiki/geth) node current 
 condition, without using inconvenient console commands.
-#### Install this app as [chrome extension](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk) or go directly to [GethDesk](http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html) url. 
+#### Install this app as [chrome extension](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk) or go directly to <a href='http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html'>GethDesk</a> url. 
 
 
 ## Dashboard
@@ -62,17 +62,17 @@ condition, without using inconvenient console commands.
 
 ![GitHub Logo](/readmeIMG/mapofNodes.jpg)
 
-## How to use [GethDesk](http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html)
-To connect to **Geth Go** through **[GethDesk](http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html)** you need to run **Geth Go** with the following parameters:
+## How to use <a href='http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html'>GethDesk</a>
+To connect to **Geth Go** through **<a href='http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html'>GethDesk</a>** you need to run **Geth Go** with the following parameters:
 #### `geth -rpc -rpcaddr 0.0.0.0 -rpccorsdomain '*' -rpcapi admin,personal,net,web3,miner,eth`
 
 You can customize **Geth Go** running options as you want, **but make sure that You 
 run Geth Go application with required apis enabled: -rpcapi 
 admin,personal,net,web3,miner,eth** to get
-**[GethDesk](http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html)** working correctly as it depends on them to gather information. 
+**<a href='http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html'>GethDesk</a>** working correctly as it depends on them to gather information. 
 
 If you forget to put **-rpcapi admin,personal,net,web3,miner,eth** while running 
-**Geth Go** it will run with default apis therefore **[GethDesk](http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html)** wont't work 
+**Geth Go** it will run with default apis therefore **<a href='http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html'>GethDesk</a>** wont't work 
 correctly.
 
 ![GitHub Logo](/readmeIMG/connection.jpg)
