@@ -1,3 +1,4 @@
+https://img.shields.io/badge/Chrome%20Web%20Store%3A-1.0%20beta-brightgreen.svg
 
 # GethDesk
 GethDesk — is an open source application to simplify work with Ethereum Geth Go console client and shows you data about your Geth Go node current condition, without using inconvenient console commands.
