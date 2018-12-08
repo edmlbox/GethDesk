@@ -2,7 +2,7 @@
 
 
 # GethDesk [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store%3A-1.0%20beta-brightgreen.svg)](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk)
-GethDesk — is an open source application to simplify work with Ethereum Geth Go console client and shows you data about your Geth Go node current condition, without using inconvenient console commands.
+**GethDesk** — is an open source application to simplify work with Ethereum Geth Go console client and shows you data about your Geth Go node current condition, without using inconvenient console commands.
 #### Install this app as [chrome extension](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk) or go directly to <a href='http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html'>GethDesk</a> url. 
 
 
