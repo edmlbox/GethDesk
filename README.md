@@ -1,7 +1,9 @@
 
 
 
-# GethDesk [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store%3A-1.0%20beta-brightgreen.svg)](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk) [![Plugin on redmine.org](https://img.shields.io/redmine/plugin/stars/redmine_xlsx_format_issue_exporter.svg)](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk)
+# GethDesk 
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+ [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store%3A-1.0%20beta-brightgreen.svg)](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk) [![Plugin on redmine.org](https://img.shields.io/redmine/plugin/stars/redmine_xlsx_format_issue_exporter.svg)](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk)
 
 
 
