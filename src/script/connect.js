@@ -1,5 +1,5 @@
 window.onload = () => {
-  console.log("loxxxxxxxxxx");
+
   let autoLogin = JSON.parse(localStorage.getItem("connect_remember_node"));
   if (autoLogin) {
     console.log(autoLogin);
