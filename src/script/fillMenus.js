@@ -549,7 +549,7 @@ function AjaxMenu(method, url, data, params) {
           getEl("remain_block_Block_pers").innerText =
             Math.floor(blockPercent) + "%";
           getEl("progressBarId").style.width = Math.floor(blockPercent) + "%";
-console.log(Math.floor(blockPercent) + "%")
+          console.log(Math.floor(blockPercent) + "%");
           Object.entries(result.result).forEach(([key, value]) => {
             let arId = [
               "currentBlock",
@@ -1371,13 +1371,6 @@ function dataToChart() {
       document.getElementById("mSTOP").style.display = "none";
     }
 
-    /*  function RND() {
-              let rnd = Math.random();
-  
-              let rnf = Math.round((rnd * 999 + 1));
-              return rnf;
-          }*/
-
     if (bar_chart.data.labels.length > 30) {
       removeData(bar_chart);
     }
@@ -1549,42 +1542,6 @@ function toWeiConverter(wei) {
     });
   });
 }
-/*
-(function() {
-  let obersever = new MutationObserver(mutation => {
-    if (mutation[0].target.data.toLowerCase() === "mining active") {
-      document.getElementById("stopMiningbtnDash").style.display = "block";
-      if (localStorage.getItem("miningScheduled") == "stop") {
-        document.getElementById("stopMiningbtnDash").innerText =
-          "Scheduled to stop";
-      } else {
-        document.getElementById("stopMiningbtnDash").innerText = "Stop Mining";
-      }
-    } else if (mutation[0].target.data.toLowerCase() === "mining scheduled!") {
-      document.getElementById("stopMiningbtnDash").style.display = "block";
-      document.getElementById("stopMiningbtnDash").innerText =
-        "Remove schedule";
-    } else if (localStorage.getItem("miningScheduled") === "true") {
-      document.getElementById("stopMiningbtnDash").style.display = "block";
-    }
-  });
-
-  document.getElementById("stopMiningbtnDash").onclick = () => {
-
-    localStorage.getItem('miningScheduled') == 'stop'
-    console.log("stopmining");
-    let objMod = getURLOBJ();
-    objMod.params = [""];
-    objMod.method = "miner_stop";
-    console.log(objMod);
-    http(objMod);
-  }; 
-  obersever.observe(document.getElementById("eth_mining"), {
-    characterData: true,
-    subtree: true
-  });
-})();
-*/
 (function() {
   let btnMINERstartText = document
     .getElementById("btnMINERstartText")
@@ -1633,19 +1590,6 @@ function toWeiConverter(wei) {
     }, 15000);
   }
 })();
-
-/* (function() {
-  let stopMiningbtnDashHover = document.getElementById("stopMiningbtnDash");
-  stopMiningbtnDashHover.onmouseenter = () => {
-    if (stopMiningbtnDashHover.innerText.toLowerCase() === "mining scheduled!")
-      stopMiningbtnDashHover.innerText = "Cancel Schedule";
-  };
-  stopMiningbtnDashHover.onmouseleave = () => {
-    if (stopMiningbtnDashHover.innerText.toLowerCase() === "cancel schedule")
-      stopMiningbtnDashHover.innerText = "Mining Scheduled!";
-  };
-})();
- */
 document.getElementById("tsetBTNN").onclick = () => {
   let objMod = getURLOBJ();
   let CPUNumber = getEl("numOfCoresID").value;
