@@ -1,5 +1,4 @@
 window.onload = () => {
-
   let autoLogin = JSON.parse(localStorage.getItem("connect_remember_node"));
   if (autoLogin) {
     console.log(autoLogin);
@@ -98,7 +97,7 @@ function HandleResponse(el, url, connect_remember_node) {
       "rpc_modules",
       "admin_nodeInfo",
       "eth_coinbase",
-     
+
       "admin_datadir",
       "net_version",
       "net_listening",
@@ -166,7 +165,6 @@ function ajax(method, url, data, connect_remember_node) {
         });
       } catch (error) {
         console.log(error, "onerror");
-       
       }
     };
     con.onabort = () => {
