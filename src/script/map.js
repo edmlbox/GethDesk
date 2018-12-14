@@ -11,8 +11,9 @@ const getGeoData = function(arrayIp) {
   req.onload = () => {
     let responseFromIpIp = JSON.parse(req.responseText);
 
-    console.log("mapAPI", responseFromIpIp);GetMap();
-    /* mapLibReadyHandler(responseFromIpIp);*/handleLongLat(responseFromIpIp);
+    console.log("mapAPI", responseFromIpIp);
+    GetMap();
+    /* mapLibReadyHandler(responseFromIpIp);*/ handleLongLat(responseFromIpIp);
   };
 };
 
@@ -42,9 +43,7 @@ function GetMap() {
   });
 }
 
-
-
-function handleLongLat(responseFromIpIp){
+function handleLongLat(responseFromIpIp) {
   window.mapData = [];
 
   for (let i = 0; i < responseFromIpIp.length; i++) {
@@ -60,108 +59,18 @@ function handleLongLat(responseFromIpIp){
     });
   }
 
-
-  console.log('window.mapData',window.mapData)
-console.log(Math.random())
-  window.mapData.forEach((element, number, array)=>{
-  
-    let center = { latitude: element.lat+Math.floor(Math.random() * 10) + 1, longitude:  element.lng+Math.floor(Math.random() * 10) + 1 };
+  console.log("window.mapData", window.mapData);
+  console.log(Math.random());
+  window.mapData.forEach((element, number, array) => {
+    let center = {
+      latitude: element.lat + Math.floor(Math.random() * 10) + 1,
+      longitude: element.lng + Math.floor(Math.random() * 10) + 1
+    };
     var pin = new Microsoft.Maps.Pushpin(center, {
       title: element.query,
-      subTitle: '',
+      subTitle: "",
       text: number.toString()
     });
     map.entities.push(pin);
-  })
-  
-
-  
-
-}
-
-
-
-
-
-
-
-
-
-/*
-let map;
-let oms;
-function readyMapLink() {
-  var mapElement = document.getElementById("map_element");
-   map = new google.maps.Map(mapElement, {
-    center: { lat: 52, lng: -1 },
-    zoom: 2
   });
-  oms = new OverlappingMarkerSpiderfier(map, {
-    markersWontMove: true, // we promise not to move any markers, allowing optimizations
-    markersWontHide: true, // we promise not to change visibility of any markers, allowing optimizations
-    basicFormatEvents: true // allow the library to skip calculating advanced formatting information
-  });
-
 }
-var mapLibsReady = 0;
-
-function mapLibReadyHandler(responseFromIpIp) {
-
-
-  window.mapData = [];
-
-
-  var iw = new google.maps.InfoWindow();
-  for (let i = 0; i < responseFromIpIp.length; i++) {
-    window.mapData.push({
-      lat: responseFromIpIp[i].lat,
-      lng: responseFromIpIp[i].lon,
-      city: responseFromIpIp[i].city,
-      query: responseFromIpIp[i].query,
-      regionName: responseFromIpIp[i].regionName,
-      zip: responseFromIpIp[i].zip,
-      org: responseFromIpIp[i].org,
-      country: responseFromIpIp[i].country
-    });
-  }
-
-  /*if (++mapLibsReady < 2) return;*/
-
-/*
-
-  oms.removeAllMarkers()
-
-  for (var i = 0, len = window.mapData.length; i < len; i++) {
-    (function() {
-      // make a closure over the marker and marker data
-      var markerData = window.mapData[i]; // e.g. { lat: 50.123, lng: 0.123, text: 'XYZ' }
-      var marker = new google.maps.Marker({ position: markerData }); // markerData works here as a LatLngLiteral
-      google.maps.event.addListener(marker, "spider_click", function(e) {
-        // 'spider_click', not plain 'click'
-        iw.setContent(
-          "<h4>" +
-            markerData.country +
-            "</h4><p>" +
-            markerData.regionName +
-            "</p><p>" +
-            markerData.city +
-            "</p><p>" +
-            markerData.org +
-            "</p></p><p>" +
-            markerData.zip +
-            "</p></p><p>" +
-            markerData.query +
-            "</p>"
-        );
-        iw.open(map, marker);
-      });
-    
-      
-
-      oms.addMarker(marker); // adds the marker to the spiderfier _and_ the map
-    })();
-  }
-  window.map = map; // for debugging/exploratory use in console
-  window.oms = oms; // ditto
-}
-*/
