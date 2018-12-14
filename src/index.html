@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +25,7 @@
     <link rel="stylesheet" href="style/style.css">
     <style>
     </style>
-   
 </head>
-
 <body>
     <!-- <div id='d1'>
             <div id='d2'></div>
@@ -154,8 +151,6 @@
                 </span><span class="Network_types" id='rpc_modules_disabled'></span></div>
             <section class='net_info'>
                 <div class="mdl-card mdl-shadow--2dp demo-card-square">
-
-
                     <div class="mdl-card__title mdl-card--expand">
                         <div class='headerCard'> <div class='headerImgWarp'>
                                 <img src="style/header/server98.svg" alt="IMG" class='headerCardImage'>
@@ -165,10 +160,7 @@
                     <div class="mdl-card__supporting-text">
                         Network ID.
                     </div>
-
                 </div>
-
-
                 <!-- Square card -->
                 <div class="mdl-card mdl-shadow--2dp demo-card-square">
                     <div class="mdl-card__title mdl-card--expand">
@@ -180,7 +172,6 @@
                     <div class="mdl-card__supporting-text">
                         Client actively listening for network connections.
                     </div>
-
                 </div>
                 <!-- Square card -->
                 <div class="mdl-card mdl-shadow--2dp demo-card-square">
@@ -195,7 +186,6 @@
                     <div class="mdl-card__supporting-text">
                         Number of peers currently connected to the client.
                     </div>
-
                 </div>
                 <!-- Square card -->
                 <div class="mdl-card mdl-shadow--2dp demo-card-square">
@@ -208,7 +198,6 @@
                     <div class="mdl-card__supporting-text">
                         The current ethereum protocol version.
                     </div>
-
                 </div>
                 <!-- Square card -->
                 <div class="mdl-card mdl-shadow--2dp demo-card-square">
@@ -222,7 +211,6 @@
                         <span class='mdl-card__supporting-text mdl-card__supporting-child'> Client mining status.</span>
                       <!--  <button id='stopMiningbtnDash' class='stopMiningbtnDash'></button>-->
                     </div>
-
                 </div>
                 <!-- Square card -->
                 <div class="mdl-card mdl-shadow--2dp demo-card-square">
@@ -235,8 +223,6 @@
                     <div class="mdl-card__supporting-text">
                         Number of hashes per second that the node is mining with.
                     </div>
-
-
                 </div>
                 <!-- Square card -->
                 <div class="mdl-card mdl-shadow--2dp demo-card-square">
@@ -253,14 +239,8 @@
                                 <button class='wei_conv' id='To_ether_conv'>ether</button>      
                                 <button class='wei_conv' id='To_gwei_conv'>gwei</button>
                                 <button class='wei_conv' id='To_micro_conv'>micro</button>
-
-
                         </div>
-                       
-                       
                     </div>
-
-
                 </div>
                 <div class="mdl-card mdl-shadow--2dp demo-card-square">
                     <div class="mdl-card__title mdl-card--expand">
@@ -274,8 +254,6 @@
                     <div class="mdl-card__supporting-text">
                         Mining reward address.
                     </div>
-
-
                 </div><!--
                 <div class='Network_cont'><span class="Network_types" id='Network_types'></span><span class='Network_text'
                         id='Network_text'>Network</span></div>
@@ -350,13 +328,11 @@
                 </div>
                 <div class='column_three'>
                     <div class='btn_add_acc_cont'>
-
                         <div class='imgandHeaderc imgandHeadercOne'>
                             <img src="style/add.svg" alt="add" title='add' class='svg_icon_acc'>
                             <h5 class='h5HeadingCl'>Create account
                             </h5>
                         </div>
-
                         <div class='zxc333'>
                             <div class='iconInsideForm'><i class="material-icons">
                                     lock
@@ -371,7 +347,6 @@
                             <input type="password" id='encryptNewAcccount2' class='form-control' placeholder="Repeat password"
                                 data-toggle="popover" title="Form error" data-content="Passwords do not match!"
                                 data-placement="left">
-
                             <button id='addAccountBTN' class='btn btn-primary'><span>Create</span>
                             </button>
                         </div>
@@ -408,7 +383,6 @@
                                 vpn_key
                             </i>
                         </div>
-
                         <input type="password" id='personal_importRawKey_input_encrypt' class='form-control'
                             placeholder="Set Password" data-toggle="popover" title="Form error" data-content="Required. Minimum length 6 characters!"
                             data-placement="left">
@@ -452,7 +426,6 @@
                                 <div id="min_hash_rate">CPU Mining</div>
                                 <span class="minHashRateTExt" id='minHashRateTExtID'>OFF</span>
                             </div>
-
                         </div>
                         <div class="BalanceWrap">
                             <div class="mnox123">
@@ -463,7 +436,6 @@
                                     </div>
                                     <span class="minHashRateTExt">Mining Hashrate</span>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -477,16 +449,12 @@
                         </div>
                     -->
                 </div>
-
             </div>
-
             <div class='miningChart'>
-
                 <div id="chart_div">
                     <div class="chartContainer">
                         <canvas id="lineChartPinkOrange" width="1149" height="300px"></canvas>
                     </div>
-
                 </div>
             </div>
             <div class='mineStartStop'>
@@ -497,20 +465,14 @@
                     <span class='numOfCores'>Number of CPU cores to use</span>
                     <input type='number' class='selectCores inputStyleOptions' name='cpuCore' id='numOfCoresID' min="1"
                         value="1">
-
                     </select>
-
                     <h3 class='MiningOptionHeader'>
                         <img src="style/wallet.svg" alt="CPUCores">
                     </h3>
                     <span class='numOfCores'>Reward Account</span>
                     <select class='selectrewardAcc inputStyleOptions' name='RewardAddress' id='RewardAddressID'>
-
                     </select>
-
                 </div>
-
-
                 <div class='mineBTNS'>
                     <button id='mSTART' class='btnMINER btnMINERstart'><span id='btnMINERstartICON'><i class="material-icons">
                                 power_settings_new
@@ -520,8 +482,6 @@
                             </i></span><span id='btnMINERstopICONText'>STOP MINING</span></button>
                 </div>
             </div>
-
-
         </ul>
         <ul class='nav_sub_menu nav_sub_menu_display' id='nav_sub_menu_node' style='background-color: rgb(247, 247, 247)'>
             <section class='nav_sub_menu_node_section'>
@@ -535,7 +495,6 @@
                             class='con_peers_lengt' id='con_peers_lengt'></span><span class='con_peers_lengt_text' id='con_peers_lengt_text'>Peers
                             connected to your node </span></div>
                 </section>
-
                 <section class='ul_cont_accordion'>
                     <ul class="list-group">
                         <li class="list-group-item"><span class="current_node_header">Default database directory :
@@ -559,11 +518,6 @@
             </section>
         </ul>
     </div>
-
-
-
-
-
     <div class="div_receive_pop scale-in-center myDivToPrint" id='div_receive_pop_print'>
         <button id='close_qr_pop' class='close_qr_pop btn btn-secondary ui-widget-content'>X</button>
         <h5>Receive Ethereum</h5>
@@ -577,14 +531,11 @@
             <br>by the person who wants to send you ethereum</span>
         <div class='btn_qr_pop_group'><button id='sendByEmail' class='sendByEmail btn btn-primary'>print</button></div>
         <div id='EnterEmailAddrIn' class='entEmaPopUp'>
-
             <img src="style/e-mail-envelope.svg" alt="mail" title='mail' class='iconImgininput'>
             <input type="email" id='getEmailIn' placeholder="Enter email">
             <button id='print_qr' class='print_qr btn btn-primary'>send by email</button>
         </div>
-
         <div class='mailSentWindow slide-in-top' id='mailSentWindow'>
-
             <div class="container">
                 <div class="success">
                     <div class="msg-success">
@@ -595,22 +546,15 @@
                     <p class="message">Wohoo! Your message was delivered successfully.</p>
                     <button class="btn btn-success" id='cls_success_whoop'>Continue</button>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
     <div class='miningPOPUP' id='miningPOPUPID'>
         <h3 id='miningPOPUPHeader'>Mining is Scheduled!</h3>
         <h4 id='miningPOPUPHeaderUnder'>Blockchain not fully synced!</h4>
-
         <p id='miningPOPUPHeaderP'>Mining will start automatically after some blockchain synchronized. Note that mining for real ether only makes sense if you are in sync with the network (since you mine on top of the consensus block). Therefore the eth blockchain downloader/synchroniser will delay mining until syncing is complete, and after that mining automatically starts unless you cancel your intention with mining stop button.</p>
         <button class='miningpopBTNOK' id='miningpopBTNOK'>OK</button>
     </div>
-   
-
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
@@ -620,17 +564,9 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    
-
-    
     <script src='script/connect.js'></script>
     <script src='script/index.js'></script>
     <script src='script/fillMenus.js'></script>
-  
-    
-   
-    
-
     <script src='script/overlappingLibrary.js'></script>
     <script src='script/map.js'></script>
     <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=[AktWnPLnLOVzsFWrXp4Li69oUJtBAeynTPsHcUaHPw2RQ0qnHCfKfTRDLdZYRTLQ]'></script>
