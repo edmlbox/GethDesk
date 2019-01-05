@@ -13,6 +13,11 @@
 
 **GethDesk** — is an open source application to simplify work with Ethereum Geth Go console client and shows you data about your Geth Go node current condition without using console commands.
 #### Install this app as [chrome extension](https://chrome.google.com/webstore/detail/ethereum-gethdesk/ldbikceofpgkjbmoijglmnaphdcfmklp?hl=uk) or go directly to <a href='http://cryptobit-env.7hiybanifg.eu-central-1.elasticbeanstalk.com/gethdesk/index.html'>GethDesk</a> url. 
+<a href='https://chrome.google.com/webstore/detail/cryptobit-bitcoin-wallet/ckpaelocniggkheibcacecnmmlmeodfa'  target="_blank">
+ <img src='https://github.com/edmlbox/CryptoBit-Bitcoin-wallet/blob/master/readmeIMG/chrome-web-store.png'/>
+</a>
+
+[Visit application page](https://chrome.google.com/webstore/detail/cryptobit-bitcoin-wallet/ckpaelocniggkheibcacecnmmlmeodfa)
 
 
 ## Core functionalities
